@@ -454,7 +454,7 @@ def pretrain(args):
     model = LitModel_supervised_pretrain(args, args.save_path,args.n_channels,args.dropout_prob)
     # print("model:\t",model)
     # logger = TensorBoardLogger(
-    #     save_dir="/home/houchen/EEG/code/BIOT",
+    #     save_dir="/home/replace/EEG/code/BIOT",
     #     version=f"{N_version}/checkpoints",
     #     name="log-pretrain",
     # )
@@ -488,7 +488,7 @@ if __name__ == "__main__":
     parser.add_argument("--weight_decay", type=float, default=1e-5, help="weight decay")
     
     parser.add_argument("--num_workers", type=int, default=32, help="number of workers") # default 32
-    parser.add_argument("--pretrained_model_path", type=str, default="/home/houchen/EEG/code/BIOT/pretrained-models/EEG-PREST-16-channels.ckpt", help="checkpoint path")
+    parser.add_argument("--pretrained_model_path", type=str, default="/home/replace/EEG/code/BIOT/pretrained-models/EEG-PREST-16-channels.ckpt", help="checkpoint path")
     
 
     # dataset parameters
@@ -507,7 +507,7 @@ if __name__ == "__main__":
     parser.add_argument("--sampling_rate", type=int, default=200, help="sampling_rate in pretrained model") # 2-shhs
     # training parameters
     parser.add_argument("--dont_train_backbone", type=bool, default=False, help="")
-    parser.add_argument("--save_res", type=str, default="/home/houchen/EEG/code/BIOT/eval/temp.csv", help="")
+    parser.add_argument("--save_res", type=str, default="/home/replace/EEG/code/BIOT/eval/temp.csv", help="")
     parser.add_argument("--save_path", type=str, default="./log-pretrain/supervised", help="checkpoint path")
     parser.add_argument("--batch_size", type=int, default=2, help="batch size") # default 1024
     parser.add_argument("--val_batch_size", type=int, default=128, help="validation batch size") # default 1024
@@ -516,7 +516,7 @@ if __name__ == "__main__":
     # parser.add_argument("--gate", type=float, default=0.9, help="gate") 
     args = parser.parse_args()
     print (args)
-    N_version = str(len(os.listdir("/home/houchen/EEG/code/BIOT/fine_tune_res")))
+    N_version = str(len(os.listdir("/home/replace/EEG/code/BIOT/fine_tune_res")))
     N_version = 'mit2'
     with open(args.save_res, 'a') as file:
         file.write(f"0_{args}\n")
