@@ -8,7 +8,7 @@
 
 EEGMaSL provides a flexible and efficient framework for self-supervised EEG representation learning based on frequency-domain data augmentation and the Mamba2 backbone. This repository includes scripts for data preprocessing, model training, evaluation, and visualization. The code is designed to support research in robust EEG feature learning and is adaptable for various downstream classification tasks.
 <p align="center">
-  <img src="MaSL/scripts/EEG_masl (2).png" alt="Overview" width="480">
+  <img src="MaSL/scripts/EEG_masl (2).png" alt="Overview" width="1080">
 </p>
 
 ## 📦 Features
